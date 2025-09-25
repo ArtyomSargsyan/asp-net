@@ -1,0 +1,7 @@
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.csproj.AssemblyReference.cache
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.AssemblyInfoInputs.cache
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.AssemblyInfo.cs
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.csproj.CoreCompileInputs.cache
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.MvcApplicationPartsAssemblyInfo.cache
