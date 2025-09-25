@@ -13,12 +13,12 @@ namespace ToDoApi.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             // Repositories
-            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<InterfaceProductRepository, ProductRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
 
             // Services
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProdcutService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<JwtService>();
 

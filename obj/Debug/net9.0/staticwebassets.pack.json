@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\0f206233-e17a-496c-8dfd-10f9fd96c29d.png",
+      "PackagePath": "staticwebassets\\images\\products\\0f206233-e17a-496c-8dfd-10f9fd96c29d.png"
+    },
+    {
+      "Id": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\7c0d0d7d-898c-4133-90f1-f60a1bddab79.png",
+      "PackagePath": "staticwebassets\\images\\products\\7c0d0d7d-898c-4133-90f1-f60a1bddab79.png"
+    },
+    {
+      "Id": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a017eb74-16a9-489e-b055-1b4b15c6494d.png",
+      "PackagePath": "staticwebassets\\images\\products\\a017eb74-16a9-489e-b055-1b4b15c6494d.png"
+    },
+    {
+      "Id": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a3310419-a907-4e15-8d48-16cb36b356f2.png",
+      "PackagePath": "staticwebassets\\images\\products\\a3310419-a907-4e15-8d48-16cb36b356f2.png"
+    },
+    {
+      "Id": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png",
+      "PackagePath": "staticwebassets\\images\\products\\f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ToDoApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ToDoApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.ToDoApi.props",
+      "PackagePath": "build\\ToDoApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ToDoApi.props",
+      "PackagePath": "buildMultiTargeting\\ToDoApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.ToDoApi.props",
+      "PackagePath": "buildTransitive\\ToDoApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,537 @@
+{
+  "Version": 1,
+  "Hash": "sx0KkYHleFfgz4wupSb9YUU/Gj+5sYXaQ+sQekvfouM=",
+  "Source": "ToDoApi",
+  "BasePath": "_content/ToDoApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ToDoApi\\wwwroot",
+      "Source": "ToDoApi",
+      "ContentRoot": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\",
+      "BasePath": "_content/ToDoApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\0f206233-e17a-496c-8dfd-10f9fd96c29d.png",
+      "SourceId": "ToDoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\",
+      "BasePath": "_content/ToDoApi",
+      "RelativePath": "images/products/0f206233-e17a-496c-8dfd-10f9fd96c29d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60vwxo9v0x",
+      "Integrity": "CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\0f206233-e17a-496c-8dfd-10f9fd96c29d.png"
+    },
+    {
+      "Identity": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\7c0d0d7d-898c-4133-90f1-f60a1bddab79.png",
+      "SourceId": "ToDoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\",
+      "BasePath": "_content/ToDoApi",
+      "RelativePath": "images/products/7c0d0d7d-898c-4133-90f1-f60a1bddab79#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60vwxo9v0x",
+      "Integrity": "CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\7c0d0d7d-898c-4133-90f1-f60a1bddab79.png"
+    },
+    {
+      "Identity": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a017eb74-16a9-489e-b055-1b4b15c6494d.png",
+      "SourceId": "ToDoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\",
+      "BasePath": "_content/ToDoApi",
+      "RelativePath": "images/products/a017eb74-16a9-489e-b055-1b4b15c6494d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60vwxo9v0x",
+      "Integrity": "CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\a017eb74-16a9-489e-b055-1b4b15c6494d.png"
+    },
+    {
+      "Identity": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a3310419-a907-4e15-8d48-16cb36b356f2.png",
+      "SourceId": "ToDoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\",
+      "BasePath": "_content/ToDoApi",
+      "RelativePath": "images/products/a3310419-a907-4e15-8d48-16cb36b356f2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60vwxo9v0x",
+      "Integrity": "CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\a3310419-a907-4e15-8d48-16cb36b356f2.png"
+    },
+    {
+      "Identity": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png",
+      "SourceId": "ToDoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\",
+      "BasePath": "_content/ToDoApi",
+      "RelativePath": "images/products/f6d871b7-ebf1-4918-a1ea-8a8430e71c25#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60vwxo9v0x",
+      "Integrity": "CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/products/0f206233-e17a-496c-8dfd-10f9fd96c29d.60vwxo9v0x.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\0f206233-e17a-496c-8dfd-10f9fd96c29d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:20:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60vwxo9v0x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/0f206233-e17a-496c-8dfd-10f9fd96c29d.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/0f206233-e17a-496c-8dfd-10f9fd96c29d.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\0f206233-e17a-496c-8dfd-10f9fd96c29d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:20:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/7c0d0d7d-898c-4133-90f1-f60a1bddab79.60vwxo9v0x.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\7c0d0d7d-898c-4133-90f1-f60a1bddab79.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:19:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60vwxo9v0x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/7c0d0d7d-898c-4133-90f1-f60a1bddab79.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/7c0d0d7d-898c-4133-90f1-f60a1bddab79.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\7c0d0d7d-898c-4133-90f1-f60a1bddab79.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:19:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/a017eb74-16a9-489e-b055-1b4b15c6494d.60vwxo9v0x.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a017eb74-16a9-489e-b055-1b4b15c6494d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:21:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60vwxo9v0x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/a017eb74-16a9-489e-b055-1b4b15c6494d.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/a017eb74-16a9-489e-b055-1b4b15c6494d.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a017eb74-16a9-489e-b055-1b4b15c6494d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:21:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/a3310419-a907-4e15-8d48-16cb36b356f2.60vwxo9v0x.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a3310419-a907-4e15-8d48-16cb36b356f2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:20:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60vwxo9v0x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/a3310419-a907-4e15-8d48-16cb36b356f2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/a3310419-a907-4e15-8d48-16cb36b356f2.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\a3310419-a907-4e15-8d48-16cb36b356f2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 20 Sep 2025 20:20:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/f6d871b7-ebf1-4918-a1ea-8a8430e71c25.60vwxo9v0x.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 21 Sep 2025 14:03:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60vwxo9v0x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png",
+      "AssetFile": "C:\\Users\\artyo\\source\\repos\\ToDoApi\\ToDoApi\\wwwroot\\images\\products\\f6d871b7-ebf1-4918-a1ea-8a8430e71c25.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5564"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 21 Sep 2025 14:03:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CiqGwyxNwejrjC+PvgMI2mYQed38UTUWPyegTfu8weU="
+        }
+      ]
+    }
+  ]
+}

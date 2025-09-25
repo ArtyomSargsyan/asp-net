@@ -49,6 +49,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
+// Seeder call – place after building app but before Run
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await DbSeeder.SeedAsync(db);
+}
+
 // Middleware
 if (app.Environment.IsDevelopment())
 {
