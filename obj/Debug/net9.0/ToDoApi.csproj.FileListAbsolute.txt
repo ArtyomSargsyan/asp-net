@@ -8,6 +8,7 @@ C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\ToDoApi.runtimeconf
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\ToDoApi.dll
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\ToDoApi.pdb
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\Bogus.dll
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\DotNetEnv.dll
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\Humanizer.dll
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -146,4 +147,3 @@ C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\refint\ToDoApi.dll
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.pdb
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ToDoApi.genruntimeconfig.cache
 C:\Users\artyo\source\repos\ToDoApi\ToDoApi\obj\Debug\net9.0\ref\ToDoApi.dll
-C:\Users\artyo\source\repos\ToDoApi\ToDoApi\bin\Debug\net9.0\Bogus.dll

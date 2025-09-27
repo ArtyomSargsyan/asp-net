@@ -10,6 +10,7 @@ namespace ToDoApi.Data
         public DbSet<Product> Products { get; set; } = null!;
         public DbSet<Category> Categories { get; set; } = null!;
         public DbSet<User> Users { get; set; }
+        public DbSet<Currency> Currencies { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
