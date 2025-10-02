@@ -1,10 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoApi.Models;
-using ToDoApi.Services.Products;
-using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
-
-using System.Threading.Tasks;
 using ToDoApi.DTO;
 
 namespace ToDoApi.Controllers
@@ -31,6 +26,25 @@ namespace ToDoApi.Controllers
             return Ok(items);
         }
 
+        [HttpGet("smoll")]
+        public async Task<IActionResult> GetProductSmoll()
+        {
+            var items = await _service.GetProductSmoll();
+            return Ok(items);
+        }
+
+        [HttpGet("names-prices")]
+        public async Task<IActionResult> GetProductNamesAndPricesAsync()
+        {
+            var items = await _service.GetProductNamesAndPricesAsync();
+            return Ok(items);
+        }
+        [HttpGet("count-per-category")]
+        public async Task<IActionResult> GetProductCountPerCategory()
+        {
+            var items = await _service.GetProductCountPerCategory();
+            return Ok(items);
+        }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -44,7 +58,7 @@ namespace ToDoApi.Controllers
         {
             var created = await _service.CreateAsync(dto);
 
-             _logger.LogInformation("Product created with Id {id}", created.Id);
+            _logger.LogInformation("Product created with Id {id}", created.Id);
 
             return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
         }
@@ -62,5 +76,7 @@ namespace ToDoApi.Controllers
             var deleted = await _service.DeleteAsync(id);
             return deleted ? NoContent() : NotFound();
         }
+        
+        
     }
 }

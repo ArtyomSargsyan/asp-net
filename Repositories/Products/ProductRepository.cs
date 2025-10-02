@@ -1,5 +1,6 @@
 using ToDoApi.Data;
 using ToDoApi.Models;
+using ToDoApi.DTO;
 using Microsoft.EntityFrameworkCore;
 
 namespace ToDoApi.Repositories.Products
@@ -20,6 +21,41 @@ namespace ToDoApi.Repositories.Products
                                  .Where(p => p.CategoryId != 0)
                                  .ToListAsync();
         }
+        
+        public async Task<IEnumerable<Product>> GetProductSmoll()
+        {
+            return await _context.Products
+                                 .Where(p => p.Price > 1000)
+                                 .ToListAsync();
+        }
+
+        public async Task<IEnumerable<ProductSmallDto>> GetProductNamesAndPricesAsync()
+        {
+           return await _context.Products
+                                .Select(p => new ProductSmallDto
+                                {
+                                    Name = p.Name,
+                                    Price = p.Price
+                                })
+                                .ToListAsync();
+        }
+       public async Task<List<CategoryProductCountDto>> GetProductCountPerCategory()
+       {
+        int totalProducts = await _context.Products.CountAsync();
+
+        return await _context.Products
+        .Include(p => p.Category)
+        .GroupBy(p => new { p.CategoryId, p.Category!.Name })
+        .Select(g => new CategoryProductCountDto
+        {
+            CategoryId = g.Key.CategoryId,
+            CategoryName = g.Key.Name,
+            Count = g.Count(),
+            ProductNames = g.Select(p => p.Name).ToList(),
+            TotalProducts = totalProducts
+        })
+        .ToListAsync();
+        } 
 
         public async Task<Product?> GetByIdAsync(long id) =>
             await _context.Products.Include(p => p.Category)
