@@ -5,6 +5,7 @@ using ToDoApi.Repositories.Users;
 using ToDoApi.Services.Auth;
 using ToDoApi.Services.Categories;
 using ToDoApi.Services.Products;
+using ToDoApi.Services.ProductModel;
 
 namespace ToDoApi.Extensions
 {
@@ -21,6 +22,7 @@ namespace ToDoApi.Extensions
             services.AddScoped<IProdcutService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<JwtService>();
+            services.AddScoped<IProductModelService, ProductModelService>();
 
             return services;
         }

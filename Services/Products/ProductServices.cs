@@ -20,7 +20,14 @@ namespace ToDoApi.Services.Products
 
         public async Task<IEnumerable<ProductDto>> GetAllProducts()
             => (await _repo.GetAllAsync()).Select(MapToDto);
+            
+        public async Task<IEnumerable<Product>> GetProductSmoll()
+            => await _repo.GetProductSmoll();
+        public async Task<IEnumerable<ProductSmallDto>> GetProductNamesAndPricesAsync()
+            => await _repo.GetProductNamesAndPricesAsync();
 
+        public async Task<IEnumerable<CategoryProductCountDto>> GetProductCountPerCategory()
+            => await _repo.GetProductCountPerCategory();    
         public async Task<ProductDto?> GetByIdProduct(int id)
         {
             var p = await _repo.GetByIdAsync(id);

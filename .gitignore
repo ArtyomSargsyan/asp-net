@@ -1,0 +1,15 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+.vscode/
+*.user
+*.suo
+
+# Environment files
+.env
+
+# Dependency directories
+node_modules/
+packages/

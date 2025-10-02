@@ -1,4 +1,5 @@
 ﻿namespace ToDoApi.Models;
+
 public class Product
 {
     public long Id { get; set; }
@@ -8,8 +9,10 @@ public class Product
 
     public int CategoryId { get; set; }
     public Category? Category { get; set; }
-     public int UserId { get; set; }
-     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public int UserId { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     public string? ImageUrl { get; set; } = string.Empty;
+    
+     public ICollection<ProductModel> ProductModels { get; set; } = new List<ProductModel>();
 }
