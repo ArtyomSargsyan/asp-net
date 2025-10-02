@@ -1,9 +1,8 @@
 using ToDoApi.DTO;
 using ToDoApi.Models;
+using ToDoApi.Services.Categories;
 using ToDoApi.Repositories.Categories;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+ 
 
 namespace ToDoApi.Services.Categories
 {
@@ -45,7 +44,7 @@ namespace ToDoApi.Services.Categories
                 Name = category.Name,
                 Products = category.Products.Select(p => new ProductDto
                 {
-                    Id = (int) p.Id,
+                    Id = (int)p.Id,
                     Name = p.Name,
                     Price = p.Price,
                     Color = p.Color,
