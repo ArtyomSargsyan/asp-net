@@ -8,6 +8,7 @@ namespace ToDoApi.Repositories.Products
     public interface InterfaceProductRepository
     {
         Task<IEnumerable<Product>> GetAllAsync();
+         Task<(IEnumerable<Product> Items, int TotalCount)> GetPagedAsync(int page, int pageSize);
         Task<IEnumerable<Product>> GetProductSmoll();
         Task<IEnumerable<ProductSmallDto>> GetProductNamesAndPricesAsync();
         Task<List<CategoryProductCountDto>> GetProductCountPerCategory();

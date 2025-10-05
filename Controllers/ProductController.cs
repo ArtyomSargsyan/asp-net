@@ -27,6 +27,13 @@ namespace ToDoApi.Controllers
             return Ok(items);
         }
 
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetPaged([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        {
+            var result = await _service.GetPagedProductsAsync(page, pageSize);
+            return Ok(result);
+        }
+
         [HttpGet("smoll")]
         public async Task<IActionResult> GetProductSmoll()
         {

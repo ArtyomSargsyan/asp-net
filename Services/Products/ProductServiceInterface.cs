@@ -4,6 +4,7 @@ using ToDoApi.Models;
 public interface IProdcutService
 {
     Task<IEnumerable<ProductDto>> GetAllProducts();
+    Task<PagedResultDto<ProductDto>> GetPagedProductsAsync(int page, int pageSize);
     Task<IEnumerable<Product>> GetProductSmoll();  
     Task<IEnumerable<ProductSmallDto>> GetProductNamesAndPricesAsync();
     Task<IEnumerable<CategoryProductCountDto>> GetProductCountPerCategory();
