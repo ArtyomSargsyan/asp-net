@@ -22,9 +22,6 @@ namespace ToDoApi.Middleware
             if (context.Request.Path.StartsWithSegments("/api/admin"))
             {
                 var user = context.User;
- var allClaims = string.Join(", ", user?.Claims.Select(c => $"{c.Type}={c.Value}") ?? new string[]{});
-                _logger.LogInformation("[AdminRoleMiddleware] Path: {Path}, Claims: {Claims}", context.Request.Path, allClaims);
-
                 var role = user?.FindFirst("Role")?.Value ?? user?.FindFirst(ClaimTypes.Role)?.Value;
 
                 if (user?.Identity?.IsAuthenticated != true)
