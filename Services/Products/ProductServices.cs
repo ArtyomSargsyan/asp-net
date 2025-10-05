@@ -7,6 +7,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ToDoApi.Services.Products
 {
@@ -20,7 +21,22 @@ namespace ToDoApi.Services.Products
 
         public async Task<IEnumerable<ProductDto>> GetAllProducts()
             => (await _repo.GetAllAsync()).Select(MapToDto);
-            
+
+        public async Task<PagedResultDto<ProductDto>> GetPagedProductsAsync(int page, int pageSize)
+        {
+            var (data, totalCount) = await _repo.GetPagedAsync(page, pageSize);
+            var mapped = data.Select(MapToDto);
+
+            return new PagedResultDto<ProductDto>
+            {
+                data = mapped,
+                CurrentPage = page,
+                PageSize = pageSize,
+                TotalItems = totalCount,
+                TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            };
+        }
+
         public async Task<IEnumerable<Product>> GetProductSmoll()
             => await _repo.GetProductSmoll();
         public async Task<IEnumerable<ProductSmallDto>> GetProductNamesAndPricesAsync()

@@ -35,5 +35,4 @@ namespace ToDoApi.DTO
         public List<string> ProductNames { get; set; } = new();
         public int TotalProducts { get; set; }
     }
-
 }

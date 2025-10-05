@@ -1,6 +1,7 @@
 using ToDoApi.Data;
 using ToDoApi.Models;
 using ToDoApi.DTO;
+using ToDoApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace ToDoApi.Repositories.Products
@@ -21,7 +22,17 @@ namespace ToDoApi.Repositories.Products
                                  .Where(p => p.CategoryId != 0)
                                  .ToListAsync();
         }
-        
+
+       public async Task<(IEnumerable<Product> Items, int TotalCount)> GetPagedAsync(int page, int pageSize)
+        {
+            var query = _context.Products
+                                .Include(p => p.Category)
+                                .AsQueryable();
+
+            var (items, totalCount) = await query.ToPagedAsync(page, pageSize);
+            return (items, totalCount);
+        }
+
         public async Task<IEnumerable<Product>> GetProductSmoll()
         {
             return await _context.Products
