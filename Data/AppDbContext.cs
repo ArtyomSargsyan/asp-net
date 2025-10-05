@@ -20,13 +20,13 @@ namespace ToDoApi.Data
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-                  // Optional: ProductModel → Product relation
+                 
+           // ProductModel → Product relation
             modelBuilder.Entity<ProductModel>()
-                .HasOne(pm => pm.Product)
-                .WithMany()
-                .HasForeignKey(pm => pm.ProductId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .HasOne(pm => pm.Product)                 
+                .WithMany(p => p.ProductModels)          
+                .HasForeignKey(pm => pm.ProductId)       
+                .OnDelete(DeleteBehavior.Cascade); 
         }
     }
 }
