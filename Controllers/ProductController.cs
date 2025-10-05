@@ -5,7 +5,8 @@ using ToDoApi.DTO;
 namespace ToDoApi.Controllers
 {
     [ApiController]
-    [Route("api/products")]
+    [Route("api/admin/products")]
+    [Authorize(Roles = "Admin")] 
     public class ProductsController : ControllerBase
     {
         private readonly IProdcutService _service;

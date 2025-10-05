@@ -10,23 +10,45 @@ namespace ToDoApi.Data
     {
         public static async Task SeedAsync(AppDbContext context)
         {
-            if (await context.Users.AnyAsync()) return; 
+            if (!await context.Users.AnyAsync(u => u.Role == "Admin"))
+            {
+                var User = new User
+                {
+                    UserName = "admin",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"), 
+                    Role = "Admin",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                };
+                await context.Users.AddAsync(User);
+            }
 
-            // 1️⃣ Users
-            var users = FakerFactory.GenerateUsers(10);
-            await context.Users.AddRangeAsync(users);
+            if (!await context.Users.AnyAsync(u => u.Role == "User"))
+            {
+                var users = FakerFactory.GenerateUsers(100);
+                await context.Users.AddRangeAsync(users);
+            }
 
-            // 2️⃣ Categories
-            var categories = FakerFactory.GenerateCategories(5);
-            await context.Categories.AddRangeAsync(categories);
-
-            await context.SaveChangesAsync(); 
-
-            // 3️⃣ Products
-            var products = FakerFactory.GenerateProducts(users, categories, 4); 
-            await context.Products.AddRangeAsync(products);
+            // Categories
+            if (!await context.Categories.AnyAsync())
+            {
+                var categories = FakerFactory.GenerateCategories(20);
+                await context.Categories.AddRangeAsync(categories);
+            }
 
             await context.SaveChangesAsync();
+
+            // Products
+            if (!await context.Products.AnyAsync())
+            {
+                var usersList = await context.Users.ToListAsync();
+                var categoriesList = await context.Categories.ToListAsync();
+
+                var products = FakerFactory.GenerateProducts(usersList, categoriesList, 200);
+                await context.Products.AddRangeAsync(products);
+
+                await context.SaveChangesAsync();
+            }
         }
     }
 }

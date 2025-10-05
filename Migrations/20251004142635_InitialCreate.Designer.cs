@@ -12,8 +12,8 @@ using ToDoApi.Data;
 namespace ToDoApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250925181710_AddCurrencyTable")]
-    partial class AddCurrencyTable
+    [Migration("20251004142635_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,6 +118,32 @@ namespace ToDoApi.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("ToDoApi.Models.ProductModel", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductModels");
+                });
+
             modelBuilder.Entity("ToDoApi.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -134,6 +160,10 @@ namespace ToDoApi.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -160,9 +190,25 @@ namespace ToDoApi.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("ToDoApi.Models.ProductModel", b =>
+                {
+                    b.HasOne("ToDoApi.Models.Product", "Product")
+                        .WithMany("ProductModels")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ToDoApi.Models.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ToDoApi.Models.Product", b =>
+                {
+                    b.Navigation("ProductModels");
                 });
 #pragma warning restore 612, 618
         }

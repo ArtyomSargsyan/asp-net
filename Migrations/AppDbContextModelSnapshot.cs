@@ -138,7 +138,7 @@ namespace ToDoApi.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductModel");
+                    b.ToTable("ProductModels");
                 });
 
             modelBuilder.Entity("ToDoApi.Models.User", b =>
@@ -157,6 +157,10 @@ namespace ToDoApi.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("longtext");
 

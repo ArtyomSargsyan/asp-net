@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using ToDoApi.Data;
 using ToDoApi.Extensions;
+using ToDoApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,8 +43,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
+
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(key)
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+
+            RoleClaimType = "Role"
         };
     });
 
@@ -70,6 +74,7 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseAdminRole();
 app.MapControllers();
 
 app.Run();
