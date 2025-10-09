@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using ToDoApi.DTO;
 using ToDoApi.Services.Categories;
@@ -14,7 +13,7 @@ namespace ToDoApi.Controllers
     {
         private readonly ICategoryService _service;
 
-        public CategoryController(ICategoryService service,)
+        public CategoryController(ICategoryService service)
         {
             _service = service;
         }
