@@ -1,6 +1,7 @@
 # Build results
 bin/
 obj/
+Logs/
 
 # User-specific files
 .vscode/
