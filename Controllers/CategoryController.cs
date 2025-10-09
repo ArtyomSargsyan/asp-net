@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ToDoApi.DTO;
 using ToDoApi.Services.Categories;
+using ToDoApi.Services.Loger;
 using System.Text.Json;
 
 namespace ToDoApi.Controllers
@@ -13,22 +14,21 @@ namespace ToDoApi.Controllers
     {
         private readonly ICategoryService _service;
 
-       private readonly ILogger<CategoryController> _logger;
-
-        public CategoryController(ICategoryService service, ILogger<CategoryController> logger)
+        public CategoryController(ICategoryService service,)
         {
             _service = service;
-            _logger = logger;
         }
 
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CategoryDto>>> GetCategories()
         {
-
             var categoriesDto = await _service.GetAllCategoriesWithProductsAsync();
-
-            return Ok(categoriesDto);
+            
+           int count = categoriesDto?.Count() ?? 0;
+           FileLogger.Instance.Info($"Fetched all categories. Count: {count}");
+           
+           return Ok(categoriesDto);
         }
 
 
