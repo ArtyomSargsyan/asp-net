@@ -1,54 +1,83 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using ToDoApi.Data;
 using ToDoApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. SERVICES CONFIGURATION (Dependency Injection)
+// ── Controllers ───────────────────────────────────────────────────────────────
 builder.Services.AddControllers()
     .AddJsonOptions(opt =>
     {
         opt.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
-        opt.JsonSerializerOptions.WriteIndented = true;
+        opt.JsonSerializerOptions.WriteIndented    = true;
     });
 
-// Swagger/OpenAPI
+// ── Swagger ───────────────────────────────────────────────────────────────────
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDoApi", Version = "v1" });
 
-// Database (PostgreSQL)
+    // Adds the padlock button and "Authorize" dialog to the Swagger UI.
+    var bearerScheme = new OpenApiSecurityScheme
+    {
+        Name         = "Authorization",
+        Type         = SecuritySchemeType.Http,
+        Scheme       = "Bearer",
+        BearerFormat = "JWT",
+        In           = ParameterLocation.Header,
+        Description  = "Paste your JWT access token here. It is sent as: Authorization: Bearer {token}",
+    };
+
+    options.AddSecurityDefinition("Bearer", bearerScheme);
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id   = "Bearer",
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+
+// ── Database ──────────────────────────────────────────────────────────────────
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Custom Application & Identity Extensions
+// ── Application services & JWT auth ──────────────────────────────────────────
 builder.Services.AddApplicationServices();
 builder.Services.AddIdentityServices(builder.Configuration);
 
 builder.Services.AddHealthChecks()
     .AddDbContextCheck<AppDbContext>();
 
+// ── Middleware pipeline ───────────────────────────────────────────────────────
 var app = builder.Build();
 
-// 2. MIDDLEWARE PIPELINE 
 app.UseErrorHandling();
 
-// Swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Project API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDoApi V1");
         c.RoutePrefix = string.Empty;
     });
 }
 
 app.UseRouting();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
-// ENDPOINTS & CONTROLLERS MAPPING
 app.MapHealthChecks("/health");
 app.MapAllEndpoints();
 app.MapControllers();
