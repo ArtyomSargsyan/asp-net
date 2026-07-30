@@ -1,7 +1,7 @@
 using ToDoApi.Domain;
 
-namespace ToDoApi.Infrastructure.Storage
-{
+namespace ToDoApi.Infrastructure.Storage;
+
     public interface IBookStore
     {
         IEnumerable<Book> GetAll();
@@ -10,4 +10,3 @@ namespace ToDoApi.Infrastructure.Storage
         bool Update(int id, Book book);
         bool Delete(int id);
     }
-}

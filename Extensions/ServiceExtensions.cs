@@ -5,6 +5,7 @@ using ToDoApi.Infrastructure.Storage;
 using ToDoApi.Repositories;
 using ToDoApi.Repositories.Categories;
 using ToDoApi.Repositories.Products;
+using ToDoApi.Repositories.RefreshTokens;
 using ToDoApi.Repositories.Users;
 using ToDoApi.Services.Auth;
 using ToDoApi.Services.Categories;
@@ -33,6 +34,7 @@ public static class ServiceExtensions
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
         // ── Domain services ───────────────────────────────────────────────────
 

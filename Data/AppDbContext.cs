@@ -18,6 +18,7 @@ namespace ToDoApi.Data
 
         public DbSet<Order> Orders { get; set; } = null!;
         public DbSet<Coupon> Coupons { get; set; } = null!;
+        public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,6 +27,16 @@ namespace ToDoApi.Data
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<RefreshToken>()
+                .HasOne(r => r.User)
+                .WithMany()
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<RefreshToken>()
+                .HasIndex(r => r.Token)
+                .IsUnique();
 
             // ProductModel → Product relation
             modelBuilder.Entity<ProductModel>()
